@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A162831B1A7B109B002CCB08 /* udpSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162831A1A7B109B002CCB08 /* udpSocket.swift */; };
 		A162831D1A7B10C3002CCB08 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162831C1A7B10C3002CCB08 /* test.swift */; };
-		A162831F1A7B1288002CCB08 /* YSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162831E1A7B1288002CCB08 /* YSocket.swift */; };
-		A16283241A7B14F1002CCB08 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A16283221A7B14F1002CCB08 /* yudpsocket.c */; };
+		A162832A1A7B1F0F002CCB08 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16283271A7B1F0F002CCB08 /* ysocket.swift */; };
+		A162832B1A7B1F0F002CCB08 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = A16283281A7B1F0F002CCB08 /* yudpsocket.c */; };
+		A162832C1A7B1F0F002CCB08 /* yudpsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16283291A7B1F0F002CCB08 /* yudpsocket.swift */; };
 		A1D737031A72CE10007011AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D737021A72CE10007011AF /* AppDelegate.swift */; };
 		A1D737051A72CE10007011AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D737041A72CE10007011AF /* ViewController.swift */; };
 		A1D737081A72CE10007011AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D737061A72CE10007011AF /* Main.storyboard */; };
@@ -30,10 +30,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A162831A1A7B109B002CCB08 /* udpSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = udpSocket.swift; sourceTree = "<group>"; };
 		A162831C1A7B10C3002CCB08 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		A162831E1A7B1288002CCB08 /* YSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSocket.swift; sourceTree = "<group>"; };
-		A16283221A7B14F1002CCB08 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		A16283261A7B1F0F002CCB08 /* H-Mobile Robot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "H-Mobile Robot-Bridging-Header.h"; sourceTree = "<group>"; };
+		A16283271A7B1F0F002CCB08 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
+		A16283281A7B1F0F002CCB08 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		A16283291A7B1F0F002CCB08 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
+		A162832D1A7B1F27002CCB08 /* ysocket-ios.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ysocket-ios.h"; sourceTree = "<group>"; };
 		A1D736FD1A72CE10007011AF /* H-Mobile Robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "H-Mobile Robot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D737011A72CE10007011AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1D737021A72CE10007011AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A16283251A7B1EAD002CCB08 /* Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				A16283271A7B1F0F002CCB08 /* ysocket.swift */,
+				A16283281A7B1F0F002CCB08 /* yudpsocket.c */,
+				A16283291A7B1F0F002CCB08 /* yudpsocket.swift */,
+				A162832D1A7B1F27002CCB08 /* ysocket-ios.h */,
+				A16283261A7B1F0F002CCB08 /* H-Mobile Robot-Bridging-Header.h */,
+			);
+			name = Wifi;
+			sourceTree = "<group>";
+		};
 		A1D736F41A72CE10007011AF = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +102,8 @@
 				A1D737021A72CE10007011AF /* AppDelegate.swift */,
 				A1D737041A72CE10007011AF /* ViewController.swift */,
 				A1D737061A72CE10007011AF /* Main.storyboard */,
-				A162831A1A7B109B002CCB08 /* udpSocket.swift */,
-				A162831E1A7B1288002CCB08 /* YSocket.swift */,
 				A162831C1A7B10C3002CCB08 /* test.swift */,
-				A16283221A7B14F1002CCB08 /* yudpsocket.c */,
+				A16283251A7B1EAD002CCB08 /* Wifi */,
 				A1D737091A72CE10007011AF /* Images.xcassets */,
 				A1D7370B1A72CE10007011AF /* LaunchScreen.xib */,
 				A1D737001A72CE10007011AF /* Supporting Files */,
@@ -224,12 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A162832C1A7B1F0F002CCB08 /* yudpsocket.swift in Sources */,
 				A1D737051A72CE10007011AF /* ViewController.swift in Sources */,
+				A162832B1A7B1F0F002CCB08 /* yudpsocket.c in Sources */,
 				A162831D1A7B10C3002CCB08 /* test.swift in Sources */,
-				A16283241A7B14F1002CCB08 /* yudpsocket.c in Sources */,
+				A162832A1A7B1F0F002CCB08 /* ysocket.swift in Sources */,
 				A1D737031A72CE10007011AF /* AppDelegate.swift in Sources */,
-				A162831B1A7B109B002CCB08 /* udpSocket.swift in Sources */,
-				A162831F1A7B1288002CCB08 /* YSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +370,7 @@
 				INFOPLIST_FILE = "H-Mobile Robot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "H-Mobile Robot/H-Mobile Robot-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -370,6 +383,7 @@
 				INFOPLIST_FILE = "H-Mobile Robot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "H-Mobile Robot/H-Mobile Robot-Bridging-Header.h";
 			};
 			name = Release;
 		};
