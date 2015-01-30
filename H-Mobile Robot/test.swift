@@ -28,7 +28,7 @@ func testudpserver(){
     })
 }
 func testudpclient(){
-    var client:UDPClient=UDPClient(addr: "localhost", port: 55555)
+    var client:UDPClient=UDPClient(addr: "192.168.0.10", port: 55555)
     println("send hello world")
     client.send(str: "hello world")
     client.close()
