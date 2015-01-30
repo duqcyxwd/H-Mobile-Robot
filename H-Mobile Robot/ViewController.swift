@@ -23,44 +23,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var msgLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
     
+    var globalVar = 0
+    var timer = NSTimer()
+    var counter = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.    
-        var globalVar = 0
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
-            for var i = 0; i < 100; i++
+            for var i = 0; i < 1; i++
             {
-                println("GCD thread running.")
-//                self.xLabel.text = String(i)
-                
-                globalVar = i
-                
-                sleep(1)
+                NSLog("GCD thread running.")
+                self.globalVar = i
             }
-            //            sleep(5);
-            dispatch_async(dispatch_get_main_queue(), {
-                
-                println("main")
-                NSLog("main")
-                for i in 1...10
-                {
-                    sleep(1)
-                    self.xLabel.text = String(globalVar)
-                }
-                //这里返回主线程，写需要主线程执aa行的代码
-                println("这里返回主线程，写需要主线程执行的代码")
-            })
         })
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
         motionManager.startDeviceMotionUpdatesToQueue(nsMotionQueue, withHandler: updateView)
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -81,15 +65,53 @@ class ViewController: UIViewController {
 //        testudpserver()
         testudpclient()
         self.xLabel.text = "Updated"
-//        let label =
+        updateLabelTest2()
+        self.xLabel.text = "Updated2"
+        print("Send int \(self.globalVar)")
         
-//        self.labb.text = "update"
-        
+//        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector: Selector("updateCounter"), userInfo: nil, repeats: true)
+
 
         // convertedNumber 被推测为类型 "Int?"， 或者类型 "optional Int"
         
     }
     
+    
+    func updateCounter() {
+//        yLabel.text = String(counter++)
+        yLabel.text = String(self.globalVar)
+        println(xLabel.text)
+    }
+    
+    func updateLabelTest2()
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            for i in 5...100000 {
+                self.globalVar = i
+                usleep(100)
+                
+                if (i == 5000) {
+                    self.showNoticeMessage("reach 5000")
+                }
+                
+            }
+        })
+    }
+    
+    func showNoticeMessage(str: String)
+    {
+    
+        let alertController = UIAlertController(title: "title", message: str, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    func updateLabelTest(str: String)
+    {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            println("Update Label")
+            self.xLabel.text = str
+        })
+    }
     
     func updateView(motion: CMDeviceMotion!, error:NSError!) {
         let grav : CMAcceleration = motion.gravity

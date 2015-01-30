@@ -183,9 +183,11 @@
 				TargetAttributes = {
 					A1D736FC1A72CE10007011AF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = B883V85P4R;
 					};
 					A1D737111A72CE10007011AF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = B883V85P4R;
 						TestTargetID = A1D736FC1A72CE10007011AF;
 					};
 				};
@@ -389,6 +391,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -400,6 +404,7 @@
 				INFOPLIST_FILE = "H-Mobile RobotTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/H-Mobile Robot.app/H-Mobile Robot";
 			};
 			name = Debug;
@@ -408,6 +413,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -415,6 +422,7 @@
 				INFOPLIST_FILE = "H-Mobile RobotTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/H-Mobile Robot.app/H-Mobile Robot";
 			};
 			name = Release;
