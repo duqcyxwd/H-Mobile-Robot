@@ -31,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		A162831C1A7B10C3002CCB08 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		A16283261A7B1F0F002CCB08 /* H-Mobile Robot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "H-Mobile Robot-Bridging-Header.h"; sourceTree = "<group>"; };
 		A16283271A7B1F0F002CCB08 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
 		A16283281A7B1F0F002CCB08 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
 		A16283291A7B1F0F002CCB08 /* yudpsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = yudpsocket.swift; sourceTree = "<group>"; };
@@ -73,7 +72,6 @@
 				A16283281A7B1F0F002CCB08 /* yudpsocket.c */,
 				A16283291A7B1F0F002CCB08 /* yudpsocket.swift */,
 				A162832D1A7B1F27002CCB08 /* ysocket-ios.h */,
-				A16283261A7B1F0F002CCB08 /* H-Mobile Robot-Bridging-Header.h */,
 			);
 			name = Wifi;
 			sourceTree = "<group>";
