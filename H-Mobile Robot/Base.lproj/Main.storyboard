@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2OS-bO-Iix">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w9J-6u-smW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
@@ -147,6 +147,15 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.6003683417451291" green="0.68878589512430199" blue="0.93219302398989901" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d46-x9-riG">
+                                <rect key="frame" x="50" y="20" width="135" height="30"/>
+                                <state key="normal" title="ToViewOneConnect">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toViewOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6Z-FB-F3N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -158,7 +167,6 @@
                         <outlet property="xLabel" destination="ToL-ug-fzD" id="hPf-xZ-vHW"/>
                         <outlet property="yLabel" destination="VIh-Kn-Boy" id="e1V-B4-RNq"/>
                         <outlet property="zLabel" destination="FiW-Lb-YY1" id="2Y0-gw-h7Z"/>
-                        <segue destination="oJg-ay-BmO" kind="modal" id="Onq-cv-sAf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -266,12 +274,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcS-Ts-uzC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-776.5" y="1148.5"/>
+            <point key="canvasLocation" x="-782.5" y="1148.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Connection View Controller-->
         <scene sceneID="qiz-zY-z7p">
             <objects>
-                <viewController id="oJg-ay-BmO" sceneMemberID="viewController">
+                <viewController id="oJg-ay-BmO" customClass="ConnectionViewController" customModule="H_Mobile_Robot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nOA-fQ-PXi"/>
                         <viewControllerLayoutGuide type="bottom" id="CB0-kt-Slw"/>
@@ -285,6 +293,9 @@
                                 <state key="normal" title="Start Connection">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="StartConnectionButtonPressed:" destination="oJg-ay-BmO" eventType="touchUpInside" id="KVL-cr-78g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlJ-i5-Y4s">
                                 <rect key="frame" x="129" y="302" width="116" height="30"/>
@@ -303,13 +314,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Lag-jy-DzO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="modal" id="Mso-At-2Dt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FRx-wM-Bof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-180.5" y="1148.5"/>
+            <point key="canvasLocation" x="-276.5" y="1148.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fkW-Yq-MVq">
@@ -320,7 +328,7 @@
                         <viewControllerLayoutGuide type="bottom" id="QfC-rJ-AD2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YZ9-Kq-XqV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -336,7 +344,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="Onq-cv-sAf"/>
-    </inferredMetricsTieBreakers>
 </document>

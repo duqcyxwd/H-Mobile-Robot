@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A123185B1A88703400F91A24 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A123185A1A88703400F91A24 /* ConnectionViewController.swift */; };
 		A157118D1A8343C200F4995F /* myViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A157118C1A8343C200F4995F /* myViewController2.swift */; };
 		A162831D1A7B10C3002CCB08 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A162831C1A7B10C3002CCB08 /* test.swift */; };
 		A162832A1A7B1F0F002CCB08 /* ysocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16283271A7B1F0F002CCB08 /* ysocket.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A123185A1A88703400F91A24 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		A157118C1A8343C200F4995F /* myViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myViewController2.swift; sourceTree = "<group>"; };
 		A162831C1A7B10C3002CCB08 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A16283271A7B1F0F002CCB08 /* ysocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ysocket.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A1D737021A72CE10007011AF /* AppDelegate.swift */,
 				A1D737041A72CE10007011AF /* ViewController.swift */,
 				A157118C1A8343C200F4995F /* myViewController2.swift */,
+				A123185A1A88703400F91A24 /* ConnectionViewController.swift */,
 				A1D737061A72CE10007011AF /* Main.storyboard */,
 				A162831C1A7B10C3002CCB08 /* test.swift */,
 				A16283251A7B1EAD002CCB08 /* Wifi */,
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A123185B1A88703400F91A24 /* ConnectionViewController.swift in Sources */,
 				A162832C1A7B1F0F002CCB08 /* yudpsocket.swift in Sources */,
 				A1D737051A72CE10007011AF /* ViewController.swift in Sources */,
 				A162832B1A7B1F0F002CCB08 /* yudpsocket.c in Sources */,

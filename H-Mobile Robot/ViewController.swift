@@ -79,6 +79,10 @@ class ViewController: UIViewController {
         })
     }
     
+    @IBAction func toViewOne(sender: AnyObject) {
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+    }
     // A help function to display Notice Message
     func showNoticeMessage(str: String)
     {
