@@ -12,6 +12,7 @@ class ConnectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("ViewTwoLoaded")
 
         // Do any additional setup after loading the view.
     }
@@ -22,7 +23,9 @@ class ConnectionViewController: UIViewController {
     }
     @IBAction func StartConnectionButtonPressed(sender: AnyObject) {
         let view2 = self.storyboard?.instantiateViewControllerWithIdentifier("view2") as ViewController
-        self.navigationController?.pushViewController(view2, animated: true)
+        
+//        self.navigationController?.pushViewController(view2, animated: true)
+
     }
     
     

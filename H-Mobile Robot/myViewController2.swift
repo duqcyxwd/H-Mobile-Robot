@@ -12,6 +12,7 @@ class myViewController2: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("ViewTwoLoaded")
 
         // Do any additional setup after loading the view.
     }
