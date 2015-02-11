@@ -28,6 +28,11 @@ class ConnectionViewController: UIViewController {
 
     }
     
+    @IBAction func sendHelloWorld() {
+        testudpclient()
+        print("Send int \(self.globalVar)")
+    }
+    
     
     
 }
